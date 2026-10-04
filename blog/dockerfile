@@ -1,0 +1,8 @@
+FROM nginx:alpine 
+# Minha imagem será construída a partir da imagem do Nginx.
+
+COPY . /usr/share/nginx/html
+# Pegue os arquivos desta pasta e copie para dentro do diretório onde o Nginx disponibiliza o site.
+
+EXPOSE 80
+# o serviço dentro do container utiliza a porta 80

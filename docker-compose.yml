@@ -1,0 +1,16 @@
+services: 
+# define os containers/serviços da aplicação.
+
+  portal:
+    build: ./portal
+    container_name: portal
+    ports:
+      - "8080:80"
+
+  blog:
+    build: ./blog
+    # Construa a imagem usando o Dockerfile que está dentro de portal.
+    container_name: blog
+    # Define o nome do container.
+    ports:
+      - "8081:80"
